@@ -41,7 +41,21 @@
         </section>
     </main>
     <script>
-        console.log(document.body);
+        const student = { name: 'kamrul', age: 24, height: '6 feet' }
+        // console.log(document.body);
+        const blogTitle = document.getElementsByTagName('h3');
+        for (const h3 of blogTitle) {
+            console.log(h3.innerText);
+        }
+
+        /* const blogDetails = document.getElementsByTagName("p");
+        for (const p of blogDetails) {
+            console.log(p);
+        } */
+        const blogDetails = document.getElementsByTagName("p");
+        for (const p of blogDetails) {
+            console.log(p.innerText);
+        }
     </script>
 </body>
 
