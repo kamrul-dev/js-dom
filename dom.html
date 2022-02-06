@@ -21,19 +21,19 @@
                     exercitationem consectetur nostrum totam perspiciatis quod!</p>
             </article>
             <article>
-                <h3>My Awesome Blog-2</h3>
+                <h3 id="second-title">My Awesome Blog-2</h3>
                 <p>Provident recusandae, adipisci officiis ipsum cumque commodi delectus neque eveniet minima, modi
                     maiores tenetur minus? Et cupiditate labore sit explicabo aperiam corporis dolor dolorem, error,
                     ipsam sed nam natus maiores.</p>
             </article>
             <article>
-                <h3>My Awesome Blog-3</h3>
+                <h3 id="third-title">My Awesome Blog-3</h3>
                 <p>Dicta cum qui quisquam voluptas, placeat corrupti dolore tempore exercitationem nemo laboriosam
                     eligendi obcaecati necessitatibus? Exercitationem, harum doloremque. Similique ipsa facere
                     voluptatibus! Nostrum dolorum quisquam unde iure at quibusdam voluptatibus?</p>
             </article>
             <article>
-                <h3>My Awesome Blog-4</h3>
+                <h3 id="fourth-title">My Awesome Blog-4</h3>
                 <p>Dicta cum qui quisquam voluptas, placeat corrupti dolore tempore exercitationem nemo laboriosam
                     eligendi obcaecati necessitatibus? Exercitationem, harum doloremque. Similique ipsa facere
                     voluptatibus! Nostrum dolorum quisquam unde iure at quibusdam voluptatibus?</p>
@@ -45,7 +45,7 @@
         // console.log(document.body);
         const blogTitle = document.getElementsByTagName('h3');
         for (const h3 of blogTitle) {
-            console.log(h3.innerText);
+            // console.log(h3.innerText);
         }
 
         /* const blogDetails = document.getElementsByTagName("p");
@@ -54,8 +54,17 @@
         } */
         const blogDetails = document.getElementsByTagName("p");
         for (const p of blogDetails) {
-            console.log(p.innerText);
+            // console.log(p.innerText);
         }
+
+        const secondTitle = document.getElementById('second-title');
+        secondTitle.style.textAlign ='center';
+        const thirdTitle = document.getElementById('third-title');
+        thirdTitle.innerText = 'Title updated by js';
+        thirdTitle.style.backgroundColor = 'salmon';
+        thirdTitle.style.padding = '10px';
+        thirdTitle.style.marginLeft = '20px';
+
     </script>
 </body>
 
