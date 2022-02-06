@@ -22,7 +22,18 @@
         <h1>Welcome to my blog webite</h1>
     </header>
     <main>
-        <section class="blogs">
+        <section class="blogs" id="blogs">
+
+            <header>
+                <h2>Blogs list</h2>
+                <ul id="blog-list">
+                    <li>Blog-4</li>
+                    <li>Blog-4</li>
+                    <li>Blog-4</li>
+                    <li>Blog-4</li>
+                </ul>
+            </header>
+
             <article class="blog">
                 <h3>My Awesome Blog-1</h3>
                 <p>Lorem ipsum, dolo class=""r sit amet consectetur adipisicing elit. Quas ullam nihil reiciendis mollitia quis
@@ -76,14 +87,7 @@
         thirdTitle.style.padding = '10px';
         thirdTitle.style.marginLeft = '20px';
 
-        // explore getElementsByClassName
-        const blogs = document.getElementsByClassName('blog');
-        for(const blog of blogs){
-            blog.style.border = '2px solid orange';
-            blog.style.borderRadius = '10px';
-            blog.style.margin = '5px';
-            blog.style.padding = '5px';
-        }
+     
 
        /*  secondTitle2.getAttribute(‘id’) ⇒ by using getAttribute we can read the attribute value.(ex: id, class, style etc)
             secondTitle2.getAttribute(‘title’, ‘I added a tooltip using js’) ⇒ to set the attribute with its value
@@ -91,7 +95,44 @@
             secondBlog.childNodes ⇒ it shows the child tag elements.
          */
 
+         // create and add element by using js
 
+         const li = document.createElement('li');
+         li.innerText = 'Blog-5';
+
+         //where to add
+        const ul = document.getElementById('blog-list');
+        // append new element
+        ul.appendChild(li);
+
+        // add article
+        const article = document.createElement('article');
+        article.classList.add('blog');
+        // const h3 = document.createElement('h3');
+        // h3.innerText = 'My Awesome Blog-5';
+        // const p = document.createElement('p');
+        // p.innerText = ' eligendi obcaecati necessitatibus? Exercitationem, harum doloremque. Similique ipsa facer voluptatibus! Nostrum dolorum quisquam unde iure at quibusdam voluptatibus? ';
+
+        // article.appendChild(h3);
+        // article.appendChild(p);
+
+        article.innerHTML = `
+        <h3>My Awesome Blog-5</h3>
+        <p>eligendi obcaecati necessitatibus? Exercitationem, harum doloremque. Similique ipsa facer voluptatibus! Nostrum dolorum </p>
+        `
+
+        // parent of article
+        const blogSection = document.getElementById('blogs');
+        blogSection.appendChild(article);
+
+           // explore getElementsByClassName
+           const blogs = document.getElementsByClassName('blog');
+        for(const blog of blogs){
+            blog.style.border = '2px solid orange';
+            blog.style.borderRadius = '10px';
+            blog.style.margin = '5px';
+            blog.style.padding = '5px';
+        }
     </script>
 </body>
 
