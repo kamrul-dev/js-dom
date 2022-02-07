@@ -25,5 +25,12 @@ for(const h3Tag of h3Tags){
 
 //========================================================================
 
+//Capture and change Element by using getElementById
+
+const Titles = document.getElementById('first-title');
+Titles.style.color = 'red';
+Titles.style.fontSize = '30px'
+Titles.innerText = 'My Awesome Blog -1 upadated by js';
+
 
 
